@@ -31,10 +31,10 @@ sudo chmod a+rw /dev/ledbp
 
 ####Afficher les messages de test de debogage:
 
-\$ echo "rien" > /dev/ledbp
-\$ dd bs=1 count=1 < /dev/ledbp
-\$ dmesg
-\$ lsmod
+echo "rien" > /dev/ledbp  
+dd bs=1 count=1 < /dev/ledbp  
+dmesg  
+lsmod  
 
 Séance 3:
 ==
@@ -42,33 +42,35 @@ Séance 3:
 ###Pilotage d'un écran LCD en mode utilisateur et par un driver
 
 > **Commentaire:**
-> Generate E signal *
+> Generate E signal  
+
 ```
 void lcd_strobe()
 {
-	gpio_update(E, 1);
-	usleep(1);	//enable pulse width 	>= 300ns
-	gpio_update(E, 0);
-	usleep(1);
-}
+	gpio_update(E, 1);  
+	usleep(1);	//enable pulse width 	>= 300ns  
+	gpio_update(E, 0);  
+	usleep(1);  
+}  
 ```
 
 ---
-> **Commentaire:**
->Le gpio du raspi ne possède que 4 pins et non 8	  
->Il faut donc envoyer 4 bits de poid fort,
->	puis les 4 derniers bits de poids faible 
+> **Commentaire:**  
+> Le gpio du raspi ne possède que 4 pins et non 8  
+> Il faut donc envoyer 4 bits de poid fort,  
+> puis les 4 derniers bits de poids faible  
+
 ```
-void lcd_write4bits(int data)
-{
-  /* **first 4 bits** */
+void lcd_write4bits(int data)  
+{  
+  /* first 4 bits */
   gpio_update(D7, BIT(7,data)); 
   gpio_update(D6, BIT(6,data)); 
   gpio_update(D5, BIT(5,data)); 
   gpio_update(D4, BIT(4,data));  
   lcd_strobe();
   
-  /* **second 4 bits** */
+  /* second 4 bits */
   gpio_update(D7, BIT(3,data)); 
   gpio_update(D6, BIT(2,data)); 
   gpio_update(D5, BIT(1,data)); 
