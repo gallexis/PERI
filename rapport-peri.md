@@ -3,13 +3,13 @@ Séance 1:
 
 ###Manipulation de LED et interrupteur
 
-```#define GPIO_SET( ptr, gpio )``` : Permet d'allumer la LED du peripherique
-\#define GPIO_CLR( ptr, gpio ) : Permet d'éteindre la LED du peripherique
-\#define GPIO_VALUE( ptr, gpio ) : Permet de recuperer la valeur du peripherique d'entrée
-delay ( half_period2 ) : Permet d'attendre une periode donnée
+```#define GPIO_SET( ptr, gpio )``` : Permet d'allumer la LED du peripherique  
+```#define GPIO_CLR( ptr, gpio )``` : Permet d'éteindre la LED du peripherique  
+```#define GPIO_VALUE( ptr, gpio )``` : Permet de recuperer la valeur du peripherique d' entrée  
+```delay ( half_period2 )``` : Permet d'attendre une periode donnée  
 
-On  a compilé sur l'ordi puis copié l' executable sur le raspberry.
-dans le makefile il y avait l'instruction "copy" pour envoyer l'exec vers le rasp.
+On  a compilé sur le PC puis copié l' executable sur le raspberry.  
+Dans le makefile il y avait l'instruction "copy" pour envoyer l'exec vers le raspberry.
 
 
 
@@ -119,4 +119,14 @@ void lcd_init()
   lcd_command(LCD_ENTRYMODESET   | LCD_EM_LEFT | LCD_EM_DISPLAYNOSHIFT );
 }
 ```
+
+Séance 4:
+==
+
+
+
+
+
+
+
 
