@@ -54,7 +54,7 @@ void lcd_strobe()
 }  
 ```
 
----
+---  
 > **Commentaire:**  
 > Le gpio du raspi ne possède que 4 pins et non 8  
 > Il faut donc envoyer 4 bits de poid fort,  
@@ -79,7 +79,7 @@ void lcd_write4bits(int data)
 }
 ```
 
----
+---  
 > **Commentaire:**
 > envoyer une instruction: RS = 0
 ```
@@ -91,8 +91,8 @@ void lcd_command(int cmd)
 }
 ```
 
----
-> **Commentaire:**
+---  
+> **Commentaire:**  
 > envoyer une donnée: RS = 1
 
 ```
@@ -103,9 +103,8 @@ void lcd_data(int character)
 }
 ```
 
----
-
-> **Commentaire:**
+---  
+> **Commentaire:**  
 > ??
 
 ```
