@@ -42,7 +42,7 @@ Séance 3:
 ###Pilotage d'un écran LCD en mode utilisateur et par un driver
 
 > **Commentaire:**
-> Generate E signal  
+> Générer signal E   
 
 ```
 void lcd_strobe()
@@ -80,8 +80,9 @@ void lcd_write4bits(int data)
 ```
 
 ---  
-> **Commentaire:**
+> **Commentaire:**  
 > envoyer une instruction: RS = 0
+
 ```
 void lcd_command(int cmd)
 {
@@ -105,10 +106,9 @@ void lcd_data(int character)
 
 ---  
 > **Commentaire:**  
-> ??
+> initialization
 
 ```
-/* initialization */
 void lcd_init()
 {
   gpio_update(E, 0);
