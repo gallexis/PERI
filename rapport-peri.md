@@ -81,7 +81,7 @@ void lcd_write4bits(int data)
 
 ---
 > **Commentaire:**
->envoyer une instruction: RS = 0
+> envoyer une instruction: RS = 0
 ```
 void lcd_command(int cmd)
 {
@@ -93,7 +93,8 @@ void lcd_command(int cmd)
 
 ---
 > **Commentaire:**
->envoyer une donnée: RS = 1
+> envoyer une donnée: RS = 1
+
 ```
 void lcd_data(int character)
 {
@@ -103,8 +104,10 @@ void lcd_data(int character)
 ```
 
 ---
+
 > **Commentaire:**
 > ??
+
 ```
 /* initialization */
 void lcd_init()
