@@ -3,7 +3,7 @@ Séance 1:
 
 ###Manipulation de LED et interrupteur
 
-\#define GPIO_SET( ptr, gpio ) : Permet d'allumer la LED du peripherique
+```#define GPIO_SET( ptr, gpio )``` : Permet d'allumer la LED du peripherique
 \#define GPIO_CLR( ptr, gpio ) : Permet d'éteindre la LED du peripherique
 \#define GPIO_VALUE( ptr, gpio ) : Permet de recuperer la valeur du peripherique d'entrée
 delay ( half_period2 ) : Permet d'attendre une periode donnée
@@ -41,7 +41,7 @@ Séance 3:
 
 ###Pilotage d'un écran LCD en mode utilisateur et par un driver
 
-> **Commentaire:**
+> **Commentaire:**  
 > Générer signal E   
 
 ```
