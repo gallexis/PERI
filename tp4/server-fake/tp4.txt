@@ -1,0 +1,11 @@
+lancer le server:
+	- cd server-fake/server/www
+	- ../server.py &
+
+
+cd ../../
+make
+./fake &
+
+Ouvrir le navigateur et entrer: 127.0.0.1:8000
+enrer une valeur puis "enter"

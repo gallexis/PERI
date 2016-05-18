@@ -23,10 +23,15 @@ Séance 2:
 - l'envoyer sur le raspi
 - executer la commande pour l'insérer dans le noyau:
 		sudo insmod ./ledbp.ko
+
+Ensuite, on a besoin de renseigner à l'OS le type de driver, en créant un fichier special via mknod:
+Un fichier spécial est un ensemble de trois valeurs (une booléenne, et deux entiers) enregistré dans un système de fichiers. La valeur booléenne indique s'il s'agit d'un fichier caractères ou blocs, et les deux entiers correspondent aux numéros majeur et mineur.
+
 - chercher dans le fichier /proc/devices le numéro major choisi par linux. 
 - créer le noeud dans le répertoire /dev et le rendre accessible par tous. Le numéro mineur est 0 car il n'y a qu'une seule instance. 
 
-sudo mknod /dev/ledbp c major 0
+sudo mknod /dev/ledbp c major 0 
+
 sudo chmod a+rw /dev/ledbp
 
 ####Afficher les messages de test de debogage:
@@ -122,6 +127,21 @@ void lcd_init()
 
 Séance 4:
 ==
+
+lancer le server:
+  - cd server-fake/server/www
+  - ../server.py &
+
+
+cd ../../
+make
+./fake &
+
+Ouvrir le navigateur et entrer: 127.0.0.1:8000
+entrer une valeur puis "enter"
+
+
+
 
 
 

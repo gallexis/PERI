@@ -1,0 +1,1 @@
+cmd_/users/enseig/gallepe/Documents/tp2/module.ko := /users/enseig/franck/peri/arm-bcm2708hardfp-linux-gnueabi/bin/bcm2708hardfp-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /users/enseig/gallepe/Documents/tp2/module.ko /users/enseig/gallepe/Documents/tp2/module.o /users/enseig/gallepe/Documents/tp2/module.mod.o

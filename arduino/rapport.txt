@@ -1,0 +1,7 @@
+cmd: 
+	- arduino
+	- outils/board/arduino nano 328
+
+	- ports /dev/ttyUSB0
+
+	- file/examples/Basics/blink

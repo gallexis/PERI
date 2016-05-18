@@ -1,0 +1,36 @@
+-Pilotes de périphériques
+
+Gère les requêtes des applications
+
+● Gestion d'une file d'attente
+● mise en attente des applications
+Gère les évènements des périphériques
+● Traitement des requêtes
+● Réveil des applications
+
+Espace Noyau
+● Statique ou Dynamique
+● Risques sur le noyau
+→ gère le matériel
+→ gère les applications
+multi-applications et multi-utilisateurs
+→ gère la virtualisation
+○ du processeur (commutation de contexte)
+○ de la mémoire (grâce à la MMU)
+○ des périphériques (grâce à la MMU et aux fichiers)
+
+Espace Utilisateur
+● Simple application
+● Risques sur le périphérique
+→ permet l'exécution d'un programme
+avec les ressources (virtuelles) attribuées par le
+noyau 
+
+
+-GPIO Memory Mapping
+
+mapping permet de manipuler le peripherique via la RAM
+On map (fait correspondre) sur notre programme, les adresses qui permettent de communiquer avec notre periph (registres), en fonction de son branchement
+
+
+
